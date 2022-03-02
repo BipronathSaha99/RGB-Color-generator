@@ -1,0 +1,172 @@
+/*======================================================================================
+                                    Font Family 
+=======================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background-color: #000;
+    color: #f3f3f3;
+    line-height: 1.5;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 200px;
+    /* text-shadow: 2px 2px 2px #dac4be; */
+    text-shadow: -0px 0px,#2A3D4E -1px 1px,#2A3D4E -2px 2px,#2A3D4E -3px 3px,#2A3D4E -4px 4px,#2A3D4E -5px 5px,#2A3D4E -6px 6px,#2A3D4E -7px 7px,#2A3D4E -8px 8px,#2A3D4E -9px 9px;
+}
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 15px 15px 15px;
+    text-align: center;
+    color: #333;
+    width: 250px;
+    height: auto;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+#copy-btn{
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px 15px 15px 15px;
+    text-align: center;
+    color: #333;
+    width: 250px;
+    height: auto;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+#copy-btn:hover{
+    background-color:rgb(179, 88, 88);
+    color: #f3f3f3;
+    transition: 0.5s;
+}
+button.btn{
+    margin-top: 20px;
+    padding: 10px 15px 15px 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f3f3f3;
+    background-color: rgb(179, 88, 88);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    transition: 0.5s;
+    background-color: lightcyan;
+    color: #333;
+}
+.toast-message{
+    position: fixed;
+    z-index: 999;
+    top: 2rem;
+    right: 2rem;
+    background-color: rgb(19,210,110);
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f3f3f3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(19,210,110);
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.toast-message-slide-in{
+    animation: toast-slide-in ease 0.5s;
+}
+.toast-message-slide-out{
+    animation: toast-slide-out ease 0.5s;
+}
+@keyframes toast-slide-in{
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes toast-slide-out{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
+/*========================================================================================
+                                        Responsive Design
+=========================================================================================*/
+@media screen and (max-width:815px){
+    html{
+        font-size: 55%;
+    }
+    .container{
+        width: 100%;
+        height: 100%; 
+        justify-content: center;
+        align-items: center;
+    } 
+    h1{
+        margin-top: 200px;
+    }
+    .btn{
+        font-size: 1.7rem !important;
+    }
+    .output{
+        /* display: flex; */
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:420px){
+    html{
+        font-size: 45%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
